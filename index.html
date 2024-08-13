@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Shreedon Recipe</h1>
+            <div class="navbar-left">
+              <a href="login.html">Login</a>
+              <a href="signup.html">Sign-Up</a>
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+        <section class="recipe-list">
+            <div class="recipe-card" onclick="openPopup('recipe1')">
+                <img src="images/butterchicken.webp" alt="Recipe 1">
+                <h2>Butter Chicken</h2>
+                <button class="read-recipe">Read Recipe</button>
+            </div>
+            <div class="recipe-card" onclick="openPopup('recipe2')">
+                <img src="images/chickencurry.webp" alt="Recipe 2">
+                <h2>Chicken Curry</h2>
+                <button class="read-recipe">Read Recipe</button>
+            </div>
+            <div class="recipe-card" onclick="openPopup('recipe3')">
+                <img src="images/chickenwithcreamsauce.webp" alt="Recipe 3">
+                <h2>Chicken with Cream Sauce</h2>
+                <button class="read-recipe">Read Recipe</button>
+            </div>
+            <div class="recipe-card" onclick="openPopup('recipe4')">
+                <img src="images/eggcurry.webp" alt="Recipe 4">
+                <h2>Egg Curry</h2>
+                <button class="read-recipe">Read Recipe</button>
+            </div>
+            <div class="recipe-card" onclick="openPopup('recipe5')">
+                <img src="images/grilledchicken.webp" alt="Recipe 5">
+                <h2>Chicken Curry</h2>
+                <button class="read-recipe">Read Recipe</button>
+            </div>
+            <div class="recipe-card" onclick="openPopup('recipe6')">
+                <img src="images/chickencurry.webp" alt="Recipe 6">
+                <h2>Chicken Curry</h2>
+                <button class="read-recipe">Read Recipe</button>
+            </div>
+            <div class="recipe-card" onclick="openPopup('recipe7')">
+                <img src="images/kheer.webp" alt="Recipe 7">
+                <h2>Chicken Curry</h2>
+                <button class="read-recipe">Read Recipe</button>
+            </div>
+            <div class="recipe-card" onclick="openPopup('recipe8')">
+                <img src="images/chickenwithcreamsauce.webp" alt="Recipe 8">
+                <h2>Chicken Curry</h2>
+                <button class="read-recipe">Read Recipe</button>
+            </div>
+            <!-- Add more recipes here -->
+        </section>
+    </main>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title">Recipe Title</h2>
+            <p id="popup-description">Recipe description goes here...</p>
+        </div>
+    </div>
+    <div id="login" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLoginSignup()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="login-email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <div id="signup" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLoginSignup()">&times;</span>
+            <h2>Signup</h2>
+            <form>
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="signup-email" required>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="signup-password" required>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
